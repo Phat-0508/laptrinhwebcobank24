@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Trải nghiệm | Đại Ngàn Homestay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .activities {
+      padding: 90px 8%;
+      background: var(--wood-beige);
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--forest-dark);
+      padding-bottom: 20px;
+      position: relative;
+    }
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-green), var(--amber-gold));
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+    .section-header p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      margin-top: 14px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-content {
+      padding: 24px 26px 26px;
+    }
+    .card-content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--forest-dark);
+    }
+    .card-content p {
+      color: var(--text-light);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .info-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 16px;
+      padding-top: 12px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .info-row span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .info-row i {
+      color: var(--primary-green);
+    }
+    .callout h3 {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .callout > p {
+      opacity: 0.8;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+    #consultBtn {
+      background: var(--amber-gold);
+      color: var(--forest-dark);
+      border: none;
+      padding: 14px 36px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(229,184,66,0.3);
+    }
+    #consultBtn:hover {
+      background: var(--amber-hover);
+      transform: translateY(-2px);
+    }
+    #formFeedback {
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: #FFE3A4;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><span>🌿</span> Đại Ngàn Homestay</a>
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="rooms.html">Phòng nghỉ</a>
+    <a href="act.html">Trải nghiệm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+</nav>
+
+<section class="hero-forest">
+  <div class="hero-content">
+    <h1>Trải Nghiệm Đại Ngàn</h1>
+    <p>Hòa mình vào rừng già — cắm trại bên suối, câu cá thư giãn, cho thú cưng ăn và khám phá nhịp sống hoang dã</p>
+  </div>
+</section>
+
+<section class="activities">
+  <div class="section-header">
+    <h2>Hoạt động giữa rừng</h2>
+    <p>Những trải nghiệm đậm chất đại ngàn, kết nối thiên nhiên và muông thú hoang dã thân thiện</p>
+  </div>
+  <div class="activity-grid">
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=600');">
+        <div class="badge"><i class="fas fa-fire"></i> Phổ biến nhất</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-campground"></i> Cắm trại hoang dã</h3>
+        <p>Dựng lều giữa rừng già, đốt lửa trại, ngắm sao đêm và nghe tiếng suối. Hướng dẫn viên bản địa giàu kinh nghiệm đồng hành cùng bạn.</p>
+        <div class="info-row">
+          <span><i class="far fa-clock"></i> 2 ngày 1 đêm</span>
+          <span><i class="fas fa-users"></i> 4–12 người</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Hoạt động cắm trại, câu cá', 'Chào Đại Ngàn, mình muốn đăng ký trải nghiệm Cắm trại hoang dã cho nhóm.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://www.hanoizoo.com/wp-content/uploads/2025/12/cach-cau-ca-suoi-9de86a.webp');">
+        <div class="badge"><i class="fas fa-fish"></i> Thư giãn</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-water"></i> Câu cá suối nguồn</h3>
+        <p>Câu cá tự nhiên tại suối Đá Bạc, kỹ thuật câu truyền thống. Cá suối tươi ngon có thể nướng ngay tại lều. Dụng cụ câu cung cấp miễn phí.</p>
+        <div class="info-row">
+          <span><i class="fas fa-stopwatch"></i> Buổi sáng (7h–11h)</span>
+          <span><i class="fas fa-tag"></i> 250k/người</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Hoạt động cắm trại, câu cá', 'Chào Đại Ngàn, mình muốn đăng ký trải nghiệm Câu cá suối nguồn vào cuối tuần.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://file.hstatic.net/200000159621/article/6.16_2a5ddb30a93848b495a51e07ea2e231a_1024x1024.jpg');">
+        <div class="badge"><i class="fas fa-paw"></i> Yêu thương</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-heart"></i> Cho thú cưng ăn</h3>
+        <p>Gặp gỡ nai con, thỏ rừng, dê núi và chim công tại khu bảo tồn nhỏ. Tự tay cho chúng ăn rau củ và hoa quả rừng — trải nghiệm khó quên.</p>
+        <div class="info-row">
+          <span><i class="fas fa-child"></i> Phù hợp gia đình</span>
+          <span><i class="fas fa-apple-alt"></i> Bao gồm thức ăn</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Cho thú cưng ăn & thiên nhiên', 'Chào Đại Ngàn, mình muốn đặt lịch trải nghiệm Cho thú cưng ăn cho gia đình có bé nhỏ.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://campingsport.vn/wp-content/uploads/2025/02/Phan-biet-giua-trekking-va-hiking-camping-sport-1024x576.jpg');">
+        <div class="badge"><i class="fas fa-hiking"></i> Phiêu lưu</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-tree"></i> Trekking xuyên rừng</h3>
+        <p>Chinh phục cung đường rừng nguyên sinh, thác ẩn, suối đá, hệ thực vật đa dạng cùng hướng dẫn viên bản địa kinh nghiệm.</p>
+        <div class="info-row">
+          <span><i class="fas fa-shoe-prints"></i> 3–4 giờ</span>
+          <span><i class="fas fa-camera"></i> Check-in sống ảo</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Hoạt động cắm trại, câu cá', 'Chào Đại Ngàn, tư vấn giúp mình cung đường Trekking xuyên rừng 8km nhé.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://tl.cdnchinhphu.vn/344445545208135680/2025/3/24/anh-2-at-1742802826100702445035.jpg');">
+        <div class="badge"><i class="fas fa-utensils"></i> Đặc sắc</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-mountain"></i> Ẩm thực đại ngàn</h3>
+        <p>Học nấu các món từ tre, măng rừng, cá suối nướng và cơm lam. Cùng đầu bếp bản địa tạo ra bữa tiệc giữa rừng đầy hương vị.</p>
+        <div class="info-row">
+          <span><i class="fas fa-mortar-board"></i> Lớp dạy nấu</span>
+          <span><i class="fas fa-leaf"></i> Nguyên liệu sạch</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Đặt phòng homestay', 'Chào Đại Ngàn, mình quan tâm đến lớp học Ẩm thực đại ngàn và nấu ăn bản địa.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="card-img" style="background-image: url('https://cdn2.tuoitre.vn/thumb_w/480/2019/6/3/son-tra-2019p038-1559536140517246128003-15595490906332133798494.png');">
+        <div class="badge"><i class="fas fa-binoculars"></i> Hoang dã</div>
+      </div>
+      <div class="card-content">
+        <h3><i class="fas fa-dove"></i> Ngắm chim & động vật</h3>
+        <p>Quan sát các loài chim, sóc bay và cầy hương trong khu sinh thái. Mang theo ống nhòm và máy ảnh để săn khoảnh khắc hoang dã.</p>
+        <div class="info-row">
+          <span><i class="fas fa-sun"></i> Sáng sớm & chiều</span>
+          <span><i class="fas fa-map-marked-alt"></i> Có trạm quan sát</span>
+        </div>
+        <button class="btn-forest" onclick="redirectToContact('Hoạt động cắm trại, câu cá', 'Chào Đại Ngàn, mình muốn đăng ký tour Ngắm chim & động vật hoang dã ban sớm.')">Đăng ký trải nghiệm <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="callout">
+  <h3>Muốn trải nghiệm nhiều hoạt động cùng lúc?</h3>
+  <p>Để lại thông tin, đội ngũ Đại Ngàn sẽ tư vấn gói combo cắm trại + câu cá + cho thú cưng ăn ưu đãi.</p>
+  <div class="contact-form">
+    <input type="email" id="contactEmail" placeholder="Email của bạn">
+    <input type="text" id="contactPhone" placeholder="Số điện thoại (tuỳ chọn)">
+    <button id="consultBtn">Nhận tư vấn <i class="fas fa-paper-plane"></i></button>
+  </div>
+  <p id="formFeedback"></p>
+</div>
+
+<footer>
+  <div class="social">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  <p style="margin-top: 1rem;">🌲 Homestay Rừng - Đại Ngàn Retreat | Lê Duẩn, Ea Kao, Buôn Ma Thuột</p>
+  <p>📞 Hotline: 0911.222.333 | ✉️ dacthanh0605@gmail.com</p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">© 2026 - Học phần Web cơ bản | Mang linh hồn rừng vào giao diện số</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Hàm xử lý chuyển trang thông minh qua contact.html kèm theo dữ liệu
+  function redirectToContact(subjectValue, messageValue) {
+    // Mã hóa các chuỗi ký tự để đưa an toàn lên thanh URL
+    const encodedSubject = encodeURIComponent(subjectValue);
+    const encodedMessage = encodeURIComponent(messageValue);
+    
+    // Chuyển hướng trình duyệt sang trang liên hệ kèm tham số
+    window.location.href = `contact.html?subject=${encodedSubject}&message=${encodedMessage}`;
+  }
+
+  const consultBtn = document.getElementById('consultBtn');
+  const feedback = document.getElementById('formFeedback');
+  
+  consultBtn.addEventListener('click', function() {
+    const email = document.getElementById('contactEmail').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    if(!email && !phone) {
+      feedback.textContent = '⚠️ Vui lòng nhập email hoặc số điện thoại để nhận tư vấn.';
+      return;
+    }
+    
+    // Nếu khách nhập thông tin ở khung combo, chuyển thẳng họ sang trang contact và điền sẵn lời nhắn combo
+    const comboMsg = `Tôi muốn nhận tư vấn gói combo tích hợp nhiều hoạt động. Email: ${email || 'Trống'}, SĐT: ${phone || 'Trống'}.`;
+    redirectToContact('Hoạt động cắm trại, câu cá', comboMsg);
+  });
+</script>
+</body>
+</html>

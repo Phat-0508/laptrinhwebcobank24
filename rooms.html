@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phòng nghỉ | Đại Ngàn Homestay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Bổ sung riêng cho rooms.html --- */
+    .room-detail-card {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 0;
+      align-items: stretch;
+      padding: 0;
+      overflow: hidden;
+    }
+    .room-detail-card:nth-child(even) {
+      direction: rtl;
+    }
+    .room-detail-card:nth-child(even) > * {
+      direction: ltr;
+    }
+    .room-detail-img {
+      height: 100%;
+      min-height: 320px;
+      border-radius: 0;
+      margin: 0;
+    }
+    .room-detail-img img {
+      height: 100%;
+      min-height: 320px;
+    }
+    .room-detail-info {
+      padding: 36px 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+    }
+    .room-detail-info h2 {
+      font-size: 1.5rem;
+      color: var(--forest-dark);
+      margin-bottom: 4px;
+    }
+    .room-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    .room-price {
+      background: var(--amber-gold);
+      color: var(--forest-dark);
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+    }
+    .room-desc {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .room-detail-info ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      margin-top: 4px;
+    }
+    .room-detail-info ul li {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .room-detail-info ul li i {
+      color: var(--primary-green);
+      font-size: 0.75rem;
+      background: rgba(43,68,58,0.08);
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .room-detail-card { grid-template-columns: 1fr; direction: ltr; }
+      .room-detail-card:nth-child(even) { direction: ltr; }
+      .room-detail-img { min-height: 240px; }
+      .room-detail-info ul { grid-template-columns: 1fr; }
+    }
+    .rooms-detail-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .table-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--forest-dark);
+      margin-bottom: 24px;
+    }
+    .booking-contact-grid {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 28px;
+    }
+    .booking-contact-grid p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .booking-contact-grid i {
+      color: var(--primary-green);
+    }
+    .quick-booking h2 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      color: var(--forest-dark);
+      margin-bottom: 10px;
+    }
+    .quick-booking p.sub {
+      color: var(--text-light);
+      margin-bottom: 0;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><span>🌿</span> Đại Ngàn Homestay</a>
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="rooms.html">Phòng nghỉ</a>
+    <a href="act.html">Trải nghiệm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <h1>Không Gian Nghỉ Dưỡng</h1>
+  <p>Thiết kế từ gỗ tự nhiên, nép mình giữa lòng rừng già nguyên sinh</p>
+</header>
+
+<main class="container">
+  <div class="rooms-detail-grid">
+
+    <article class="room-detail-card">
+      <div class="room-detail-img">
+        <img src="https://nhago.com/img_data/images/nha-go-thai-lan/nha-go-thai-lan-net-kien-truc-doc-dao-cua-xu-so-chua-vang.jpg" alt="Lán gỗ cổ thụ">
+      </div>
+      <div class="room-detail-info">
+        <h2>Lán Gỗ Cổ Thụ</h2>
+        <div class="room-meta">
+          <span><i class="fas fa-expand-arrows-alt"></i> 35m²</span>
+          <span class="room-price">1.200.000 VNĐ / đêm</span>
+        </div>
+        <p class="room-desc">Sở hữu tầm nhìn ôm trọn cánh rừng nguyên sinh bạt ngàn, không gian mang bồn tắm gỗ ngoài trời mộc mạc và ban công rộng rãi đón tiếng suối reo.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Giường King size cao cấp</li>
+          <li><i class="fas fa-check"></i> Bồn tắm gỗ tự nhiên</li>
+          <li><i class="fas fa-check"></i> Điều hòa & Quạt trần</li>
+          <li><i class="fas fa-check"></i> Wifi tốc độ cao</li>
+        </ul>
+        <a href="contact.html" class="btn-forest" style="margin-top:8px; align-self:flex-start;">Đặt phòng ngay</a>
+      </div>
+    </article>
+
+    <article class="room-detail-card">
+      <div class="room-detail-img">
+        <img src="https://vnn-imgs-f.vgcloud.vn/2021/10/04/16/gioi-nha-giau-bo-hang-ty-dong-ra-xay-nha-tren-cay-o-nhu-nguoi-rung-2.jpg" alt="Căn nhà trên cây">
+      </div>
+      <div class="room-detail-info">
+        <h2>Căn Nhà Trên Cây</h2>
+        <div class="room-meta">
+          <span><i class="fas fa-expand-arrows-alt"></i> 28m²</span>
+          <span class="room-price">1.450.000 VNĐ / đêm</span>
+        </div>
+        <p class="room-desc">Trải nghiệm độc đáo lơ lửng giữa những tán lá cổ thụ lớn. Nơi lý tưởng để thức giấc săn mây ban sớm hay tựa lưng ngắm hoàng hôn tím rực.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Giường đôi 1m6 ấm cúng</li>
+          <li><i class="fas fa-check"></i> Kính lấy sáng toàn cảnh</li>
+          <li><i class="fas fa-check"></i> Phòng tắm kính hướng rừng</li>
+          <li><i class="fas fa-check"></i> Trà thảo mộc đặc sản</li>
+        </ul>
+        <a href="contact.html" class="btn-forest" style="margin-top:8px; align-self:flex-start;">Đặt phòng ngay</a>
+      </div>
+    </article>
+
+    <article class="room-detail-card">
+      <div class="room-detail-img">
+        <img src="https://photo.znews.vn/w1210/Uploaded/qhj_pwqvdvicbu/2023_02_15/1__1.jpeg" alt="Lều bên suối">
+      </div>
+      <div class="room-detail-info">
+        <h2>Lều Bên Suối — Glamping</h2>
+        <div class="room-meta">
+          <span><i class="fas fa-expand-arrows-alt"></i> 22m²</span>
+          <span class="room-price">950.000 VNĐ / đêm</span>
+        </div>
+        <p class="room-desc">Glamping sang trọng tọa lạc sát mép suối nguồn trong vắt, tích hợp tiện ích cao cấp và khoảng sân nhỏ tự do đốt lửa trại về đêm.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Nệm lớn & Màn chống muỗi</li>
+          <li><i class="fas fa-check"></i> Khu lửa trại riêng tư</li>
+          <li><i class="fas fa-check"></i> Đèn trang trí lãng mạn</li>
+          <li><i class="fas fa-check"></i> Bữa sáng miễn phí</li>
+        </ul>
+        <a href="contact.html" class="btn-forest" style="margin-top:8px; align-self:flex-start;">Đặt phòng ngay</a>
+      </div>
+    </article>
+
+    <article class="room-detail-card">
+      <div class="room-detail-img">
+        <img src="https://arcviet.vn/wp-content/uploads/2018/08/phong-khach-mau-xanh-la-cay-1.jpg" alt="Phòng gia đình">
+      </div>
+      <div class="room-detail-info">
+        <h2>Phòng Gia Đình Rừng Xanh</h2>
+        <div class="room-meta">
+          <span><i class="fas fa-expand-arrows-alt"></i> 50m²</span>
+          <span class="room-price">1.800.000 VNĐ / đêm</span>
+        </div>
+        <p class="room-desc">Không gian rộng rãi thiết kế riêng cho gia đình hoặc nhóm bạn 4–5 người, có gian bếp nhỏ tự nấu nướng và sân vườn độc lập thoáng mát.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> 2 giường đôi 1m6</li>
+          <li><i class="fas fa-check"></i> Phòng khách + Bếp mini</li>
+          <li><i class="fas fa-check"></i> Sân vườn độc lập</li>
+          <li><i class="fas fa-check"></i> Xe điện nội khu đưa đón</li>
+        </ul>
+        <a href="contact.html" class="btn-forest" style="margin-top:8px; align-self:flex-start;">Đặt phòng ngay</a>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="comparison-section">
+    <h3 class="table-title">Bảng So Sánh Hạng Phòng</h3>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Hạng Phòng</th>
+            <th>Diện Tích</th>
+            <th>Giá / Đêm</th>
+            <th>Đặc Điểm Nổi Bật</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Lán Gỗ Cổ Thụ</td><td>35m²</td><td>1.200.000 VNĐ</td><td>Tầm nhìn rừng già, bồn tắm gỗ mộc tự nhiên</td></tr>
+          <tr><td>Căn nhà trên cây</td><td>28m²</td><td>1.450.000 VNĐ</td><td>Ban công ngắm mây, vách kính panorama</td></tr>
+          <tr><td>Lều bên suối</td><td>22m²</td><td>950.000 VNĐ</td><td>Sát suối Đá Bạc, lửa trại BBQ độc lập</td></tr>
+          <tr><td>Phòng Gia Đình</td><td>50m²</td><td>1.800.000 VNĐ</td><td>2 giường đôi, bếp mini, sân vườn riêng</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="quick-booking">
+    <h2>Giữ phòng sớm cho chuyến đi của bạn</h2>
+    <p class="sub">Liên hệ ngay để nhận ưu đãi theo mùa và tư vấn lịch trình cá nhân hoá.</p>
+    <div class="booking-contact-grid">
+      <p><i class="fas fa-phone-alt"></i> <strong>Hotline:</strong> 0911.222.333</p>
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> dacthanh0605@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>Vị trí:</strong> Thôn Bản Lác, Đắk Lắk</p>
+    </div>
+    <a href="contact.html" class="btn-forest">Liên hệ đặt phòng →</a>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  <p style="margin-top: 1rem;">🌲 Homestay Rừng - Đại Ngàn Retreat | Lê Duẩn, Ea Kao, Buôn Ma Thuột</p>
+  <p>📞 Hotline: 0911.222.333 | ✉️ dacthanh0605@gmail.com</p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">© 2026 - Học phần Web cơ bản | Mang linh hồn rừng vào giao diện số</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Liên hệ | Đại Ngàn Homestay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Bổ sung riêng cho contact.html --- */
+    .contact-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .contact-info > p {
+      opacity: 0.65;
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+    .info-detail { display: flex; flex-direction: column; gap: 0; }
+    .info-item {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-item h4 {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .info-item p {
+      font-size: 0.92rem;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: var(--transition);
+    }
+    .social-links a:hover {
+      background: var(--amber-gold);
+      color: var(--forest-dark);
+      border-color: var(--amber-gold);
+      transform: translateY(-2px);
+    }
+    .contact-wrapper .contact-form h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--forest-dark);
+      margin-bottom: 6px;
+    }
+    .contact-wrapper .contact-form > p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .note i { color: var(--primary-green); margin-top: 2px; }
+    .map-wrapper {
+      max-width: 1160px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+    }
+    .map-wrapper h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--forest-dark);
+      margin-bottom: 16px;
+    }
+    .map-note {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .map-note i { color: var(--primary-green); margin-right: 6px; }
+    #submitSuccess {
+      display: none;
+      background: #ecfdf5;
+      border: 1px solid #86efac;
+      color: #166534;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"><span>🌿</span> Đại Ngàn Homestay</a>
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="rooms.html">Phòng nghỉ</a>
+    <a href="act.html">Trải nghiệm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <h1>Liên hệ với chúng tôi</h1>
+  <p>Để lại lời nhắn, chúng tôi sẽ đồng hành cùng bạn trong hành trình khám phá đại ngàn</p>
+</section>
+
+<div class="contact-wrapper">
+
+  <div class="contact-info">
+    <h3>Đại Ngàn Homestay</h3>
+    <p>Rừng già – Bản Lác – Đắk Lắk</p>
+    <div class="info-detail">
+      <div class="info-item">
+        <div>
+          <h4><i class="fas fa-map-marker-alt" style="margin-right:6px;color:var(--amber-gold)"></i>Địa chỉ</h4>
+          <p>Số 567 đường Lê Duẩn, phường Ea Kao, thành phố Buôn Ma Thuột, tỉnh Đắk Lắk</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <h4><i class="fas fa-phone-alt" style="margin-right:6px;color:var(--amber-gold)"></i>Điện thoại / Zalo</h4>
+          <p>0912.345.678 (Ms. FatBeo)</p>
+          <p>0945.987.654 (Lễ tân Q.Dieu)</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <h4><i class="fas fa-envelope" style="margin-right:6px;color:var(--amber-gold)"></i>Email</h4>
+          <p>dacthanh0605@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <h4><i class="fas fa-clock" style="margin-right:6px;color:var(--amber-gold)"></i>Giờ tư vấn</h4>
+          <p>08:00 – 21:00 mỗi ngày (kể cả lễ)</p>
+        </div>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h3>GỬI TIN NHẮN ĐẾN ĐẠI NGÀN</h3>
+    <p>Chúng tôi phản hồi trong vòng 2 giờ làm việc.</p>
+    
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+      <div class="input-group">
+        <label>Họ và tên *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Thị Rừng" required>
+      </div>
+      <div class="input-group">
+        <label>Email *</label>
+        <input type="email" id="email" name="email" placeholder="ban@example.com" required>
+      </div>
+      <div class="input-group">
+        <label>Số điện thoại</label>
+        <input type="tel" id="phone" name="phone" placeholder="0912 345 678">
+      </div>
+      <div class="input-group">
+        <label>Chủ đề</label>
+        <select id="subject" name="subject">
+          <option value="Đặt phòng homestay">Đặt phòng homestay</option>
+          <option value="Hoạt động cắm trại, câu cá">Hoạt động cắm trại, câu cá</option>
+          <option value="Cho thú cưng ăn & thiên nhiên">Cho thú cưng ăn & thiên nhiên</option>
+          <option value="Hợp tác & sự kiện">Hợp tác & sự kiện</option>
+          <option value="Góp ý dịch vụ">Góp ý dịch vụ</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Lời nhắn *</label>
+        <textarea id="message" name="message" rows="4" placeholder="Xin chào, tôi muốn đặt trải nghiệm cắm trại vào cuối tuần..." required></textarea>
+      </div>
+      
+      <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Gửi liên hệ ngay</button>
+      
+      <div id="submitSuccess"></div>
+      
+      <p class="note"><i class="fas fa-lock"></i> Thông tin của bạn được bảo mật hoàn toàn.</p>
+    </form>
+  </div>
+
+</div>
+
+<div class="map-wrapper">
+  <h3>Tìm đường đến với chúng tôi</h3>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.98786289416!2d105.17622641864226!3d20.810307243072077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345cf2b9f20f6f%3A0x8cb9f51ed9e9035d!2zSMOyYSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1712157893123!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <p class="map-note"><i class="fas fa-tree"></i> Khu vực homestay nằm sâu trong rừng, cách trung tâm thị trấn 15km. Xe đưa đón có sẵn theo yêu cầu.</p>
+</div>
+
+<footer>
+  <div class="social">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+  </div>
+  <p style="margin-top: 1rem;">🌲 Homestay Rừng - Đại Ngàn Retreat | Lê Duẩn, Ea Kao, Buôn Ma Thuột</p>
+  <p>📞 Hotline: 0911.222.333 | ✉️ dacthanh0605@gmail.com</p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">© 2026 - Học phần Web cơ bản | Mang linh hồn rừng vào giao diện số</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // TỰ ĐỘNG ĐỌC DỮ LIỆU TỪ URL ĐỂ ĐIỀN VÀO FORM KHI CHUYỂN TRANG
+  window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const subjectParam = urlParams.get('subject');
+    const messageParam = urlParams.get('message');
+    
+    if (subjectParam) {
+      const subjectSelect = document.getElementById('subject');
+      for (let option of subjectSelect.options) {
+        if (option.value.includes(subjectParam) || subjectParam.includes(option.value)) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+    if (messageParam) {
+      document.getElementById('message').value = messageParam;
+    }
+  });
+
+  // HÀM XỬ LÝ SUBMIT GỬI DỮ LIỆU NGẦM BẰNG FETCH API (ĐƯỜNG DẪN TƯƠNG ĐỐI)
+  function handleSubmit(e) {
+  e.preventDefault(); 
+  
+  const form = e.target;
+  const button = form.querySelector('button[type=submit]');
+  const formData = new FormData(form);
+  
+  button.disabled = true;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang gửi dữ liệu...';
+  
+  fetch('process-contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  // Thay vì ép kiểu .json() ngay, ta lấy văn bản thô (.text()) để phòng lỗi cú pháp PHP
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Máy chủ phản hồi lỗi HTTP: ' + response.status);
+    }
+    return response.text(); 
+  })
+  .then(text => {
+    // Thử phân tích chuỗi văn bản thô thành đối tượng JSON
+    try {
+      const data = JSON.parse(text);
+      
+      if (data.status === 'success') {
+        form.reset();
+        alert("🎉 Cảm ơn bạn! Thông tin liên hệ đã được gửi đến ban quản trị.");
+      } else {
+        alert("⚠️ Thất bại:\n" + data.message);
+      }
+    } catch (jsonError) {
+      // Nếu không phải JSON, nghĩa là file PHP đang xuất lỗi hệ thống (Cơ sở dữ liệu, cú pháp...)
+      alert("❌ Lỗi hệ thống từ file PHP!\n\nNội dung lỗi chi tiết:\n" + text.replace(/<[^>]*>/g, ''));
+    }
+    
+    // Trả lại trạng thái cho nút bấm
+    button.disabled = false;
+    button.innerHTML = '<i class="fas fa-paper-plane"></i> Gửi liên hệ ngay';
+  })
+  .catch(error => {
+    // Lỗi kết nối mạng, sai đường dẫn file hoặc chết Apache
+    alert("🚨 Không thể kết nối tới máy chủ:\n" + error.message);
+    button.disabled = false;
+    button.innerHTML = '<i class="fas fa-paper-plane"></i> Gửi liên hệ ngay';
+  });
+}
+</script>
+</body>
+</html>
